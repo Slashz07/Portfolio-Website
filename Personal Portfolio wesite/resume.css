@@ -1,0 +1,226 @@
+  * {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: gainsboro;
+    }
+
+    .doc {
+      display: flex;
+      flex-direction: row;
+      margin: 1vh 2vw;
+    }
+
+    .personal_info {
+      width: 24vw;
+      background-color: rgb(0, 128, 255);
+      margin: 1vh 1vw;
+      position: relative;
+      top: 3vh;
+      border: outset;
+      /* background-image: url("/all_images/resume_pic.png");
+      background-size: contain;
+      background-repeat: no-repeat; */
+    }
+
+    .personal_info span {
+      position: absolute;
+      top: 7.5em;
+      left: 2em;
+      text-align: left;
+      color: black;
+      font-size: 1.4vw;
+      /* display: inline-block; */
+      z-index: 2;
+    }
+
+
+
+    .row {
+      position: relative;
+      left: 1vw;
+      text-align: left;
+      color: white;
+      padding: 1vh 1vw;
+      font-size: 1.4vw;
+
+    }
+
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      /* align-content: space-around; */
+    }
+
+    .exp {
+
+      margin: 1vh 1vw;
+      background-color: white;
+      position: relative;
+      top: 3vh;
+      width: 60vw;
+      /* height: 50vh; */
+      border: outset;
+      border-color: rgb(0, 128, 255);
+      padding: 5vh 2vw;
+      padding-bottom: 12vh;
+    }
+
+    .edu {
+      margin: 1vh 1vw;
+      background-color: white;
+      position: relative;
+      top: 3vh;
+      width: 60vw;
+      /* height: 50vh; */
+      border: outset;
+      border-color: rgb(0, 128, 255);
+      padding: 5vh 2vw;
+      padding-bottom: 12vh;
+    }
+
+    .interests {
+      margin: 1vh 1vw;
+      background-color: white;
+      position: relative;
+      width: 60vw;
+      /* height: 30vh; */
+      top: 3vh;
+      border: outset;
+      border-color: rgb(0, 128, 255);
+      padding: 3vh 2vw;
+    }
+
+    .exp header {
+      position: relative;
+      left: 5vw;
+      text-align: left;
+      font-size: 5vh;
+      display: inline-block;
+    }
+
+    .edu header {
+      position: relative;
+      left: 5vw;
+      text-align: left;
+      font-size: 5vh;
+
+    }
+
+    .interests header {
+      position: relative;
+      left: 2em;
+      text-align: left;
+      padding: 3vh 0;
+      font-size: 2.3em;
+    }
+
+    .interests .icon {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      left: 2em;
+      align-items: center;
+      font-size: 2.5em;
+      padding-bottom: 1em;
+    }
+
+    .interests .icon .custom-icon {
+      font-size: 1em;
+    }
+
+    .interests .icon i {
+      padding: 0 3vw;
+    }
+
+    footer {
+      background-color: white;
+      margin: 1vh 1vw;
+      position: relative;
+      width: 62vw;
+      /* height: 15vh; */
+      top: 3vh;
+      padding: 2vh 1vw;
+      border: outset;
+      border-color: rgb(0, 128, 255);
+    }
+
+    footer ul {
+      display: flex;
+      justify-content: space-around;
+      padding: 2vh 0;
+      font-size: 1.8vw;
+    }
+
+    footer ul li {
+      display: inline-block;
+      list-style-type: none;
+      border: 3px solid darkturquoise
+    }
+
+    footer ul li a {
+      color: darkturquoise;
+      text-decoration: none;
+
+    }
+
+    .exp hr {
+      margin: 2vh 0;
+      width: 65%;
+    }
+
+    .edu hr {
+      margin: 2vh 0;
+      width: 65%;
+    }
+
+    .box1 {
+      width: 56vw;
+      position: relative;
+      left: 4vw;
+      top: 2vh;
+      padding: 1vh 0;
+      text-align: left;
+      border-bottom: 2px solid grey;
+      display: inline-block;
+
+    }
+
+    .box2 {
+      width: 56vw;
+      position: relative;
+      left: 4vw;
+      top: 2vh;
+      padding: 1vh 0;
+      text-align: left;
+      border-bottom: 2px solid grey;
+      display: inline-block;
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: 0.5fr 3fr;
+      justify-content: center;
+      position: relative;
+      top: 1em;
+    }
+
+
+    .col1 i {
+      margin: 9.5vh 1vw;
+    }
+
+
+    .col2 hr {
+      margin: 3vh 0;
+    }
+
+    .container p,
+    b,
+    i {
+      font-size: 3vh 3vw;
+    }

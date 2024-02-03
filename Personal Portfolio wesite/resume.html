@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- <link rel="stylesheet" href="resume.css"> -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: gainsboro;
+    }
+
+    .doc {
+      display: flex;
+      flex-direction: row;
+      margin: 1vh 2vw;
+    }
+
+    .personal_info {
+      width: 24vw;
+      background-color: rgb(0, 128, 255);
+      margin: 1vh 1vw;
+      position: relative;
+      top: 3vh;
+      border: outset;
+      /* background-image: url("/all_images/resume_pic.png");
+      background-size: contain;
+      background-repeat: no-repeat; */
+    }
+
+    .personal_info span {
+      position: absolute;
+      top: 7.5em;
+      left: 2em;
+      text-align: left;
+      color: black;
+      font-size: 1.4vw;
+      /* display: inline-block; */
+      z-index: 2;
+    }
+
+
+
+    .row {
+      position: relative;
+      left: 1vw;
+      text-align: left;
+      color: white;
+      padding: 1vh 1vw;
+      font-size: 1.4vw;
+
+    }
+
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      /* align-content: space-around; */
+    }
+
+    .exp {
+
+      margin: 1vh 1vw;
+      background-color: white;
+      position: relative;
+      top: 3vh;
+      width: 60vw;
+      /* height: 50vh; */
+      border: outset;
+      border-color: rgb(0, 128, 255);
+      padding: 5vh 2vw;
+      padding-bottom: 12vh;
+    }
+
+    .edu {
+      margin: 1vh 1vw;
+      background-color: white;
+      position: relative;
+      top: 3vh;
+      width: 60vw;
+      /* height: 50vh; */
+      border: outset;
+      border-color: rgb(0, 128, 255);
+      padding: 5vh 2vw;
+      padding-bottom: 12vh;
+    }
+
+    .interests {
+      margin: 1vh 1vw;
+      background-color: white;
+      position: relative;
+      width: 60vw;
+      /* height: 30vh; */
+      top: 3vh;
+      border: outset;
+      border-color: rgb(0, 128, 255);
+      padding: 3vh 2vw;
+    }
+
+    .exp header {
+      position: relative;
+      left: 5vw;
+      text-align: left;
+      font-size: 5vh;
+      display: inline-block;
+    }
+
+    .edu header {
+      position: relative;
+      left: 5vw;
+      text-align: left;
+      font-size: 5vh;
+
+    }
+
+    .interests header {
+      position: relative;
+      left: 2em;
+      text-align: left;
+      padding: 3vh 0;
+      font-size: 2.3em;
+    }
+
+    .interests .icon {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      left: 2em;
+      align-items: center;
+      font-size: 2.5em;
+      padding-bottom: 1em;
+    }
+
+    .interests .icon .custom-icon {
+      font-size: 1em;
+    }
+
+    .interests .icon i {
+      padding: 0 3vw;
+    }
+
+    footer {
+      background-color: white;
+      margin: 1vh 1vw;
+      position: relative;
+      width: 62vw;
+      /* height: 15vh; */
+      top: 3vh;
+      padding: 2vh 1vw;
+      border: outset;
+      border-color: rgb(0, 128, 255);
+    }
+
+    footer ul {
+      display: flex;
+      justify-content: space-around;
+      padding: 2vh 0;
+      font-size: 1.8vw;
+    }
+
+    footer ul li {
+      display: inline-block;
+      list-style-type: none;
+      border: 3px solid darkturquoise
+    }
+
+    footer ul li a {
+      color: darkturquoise;
+      text-decoration: none;
+
+    }
+
+    .exp hr {
+      margin: 2vh 0;
+      width: 65%;
+    }
+
+    .edu hr {
+      margin: 2vh 0;
+      width: 65%;
+    }
+
+    .box1 {
+      width: 56vw;
+      position: relative;
+      left: 4vw;
+      top: 2vh;
+      padding: 1vh 0;
+      text-align: left;
+      border-bottom: 2px solid grey;
+      display: inline-block;
+
+    }
+
+    .box2 {
+      width: 56vw;
+      position: relative;
+      left: 4vw;
+      top: 2vh;
+      padding: 1vh 0;
+      text-align: left;
+      border-bottom: 2px solid grey;
+      display: inline-block;
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: 0.5fr 3fr;
+      justify-content: center;
+      position: relative;
+      top: 1em;
+    }
+
+
+    .col1 i {
+      margin: 9.5vh 1vw;
+    }
+
+
+    .col2 hr {
+      margin: 3vh 0;
+    }
+
+    .container p,
+    b,
+    i {
+      font-size: 3vh 3vw;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="doc">
+    <div class="personal_info">
+      <img id="resumeImg" src="./resume_pic.png" width="100%">
+      <span class="name">
+        <b>Ryan Reymond</b>
+        <br>
+        <small><i>UI and UX Designer</i></small>
+      </span>
+      <div class="info">
+        <div class="col1">
+          <i class='fas fa-user' style="color: white;"></i><br>
+          <i class='fas fa-phone' style="color: white;"></i><br>
+          <i class='fas fa-message' style="color: white;"></i><br>
+          <i class='fas fa-house-chimney' style="color: white;"></i><br>
+          <i class='fas fa-calendar' style="color: white;"></i><br>
+        </div>
+        <div class="col2">
+          <div class="row">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptatum quis beatae, illo
+              facerecupiditatetemporibus non dolorum ipsum fugit!</p>
+            <hr>
+          </div>
+          <div class="row">
+            <p>
+              <b>9992054839</b>
+              <br>
+              mobile
+              <br>
+              <b>9896387192</b>
+              <br>
+              work
+            </p>
+            <hr>
+          </div>
+          <div class="row">
+            <p>
+              <b> sumitsaini6248@gmail.com</b>
+              <br>
+              personal
+              <br>
+              <b>koolcephoid642@gmail.com</b>
+              <br>
+              work
+            </p>
+            <hr>
+          </div>
+          <div class="row">
+            <p> H.no. 2285,karnal colony
+              <br>
+              Barara,Ambala
+              <br>
+              pin:133201</p>
+            <hr>
+          </div>
+          <div class="row">
+            <b>Professional Skills</b>
+            <ul>
+              <li>Adobe Photoshop</li>
+              <li>Html</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>Python</li>
+              <li>C++</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="exp">
+        <header>
+          <i class='fas fa-bag-shopping ' style="color: grey"></i>
+          <b>Work Experience</b>
+        </header>
+        <div class="box1">
+          <p><b>UI/UX Designer <small>@Academy</small></b>
+            <br>
+            <span>JAN 2020- DEC 2021</span>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, commodi.</p>
+          </p>
+        </div>
+        <div class="box1">
+          <p><b>Creative Director <small>@DeviseWeb</small></b>
+            <br>
+            <span>JAN 2020- DEC 2021</span>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, commodi.</p>
+          </p>
+        </div>
+        <div class="box1">
+          <p><b>Graphics Designer <small>@Creative World</small></b>
+            <br>
+            <span>JAN 2020- DEC 2021</span>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, commodi.</p>
+          </p>
+        </div>
+      </div>
+      <div class="edu">
+        <header>
+          <i class='fas fa-graduation-cap ' style="color: grey;"></i>
+          <b>Education</b>
+        </header>
+        <div class="box2">
+          <p> <b>Art and Multimedia <small>@Oxford University</small></b>
+            <br>
+            <span>JAN 2020- July 2022</span>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, commodi.</p>
+          </p>
+        </div>
+        <div class="box2">
+          <p> <b>Under Graduation <small>@MMdu</small></b>
+            <br>
+            <span>August 2022- September 2025</span>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, commodi.</p>
+          </p>
+        </div>
+        <div class="box2">
+          <p> <b>Post Graduation<small>@Delhi Uneversity</small></b>
+            <br>
+            <span>JAN 2025- DEC 2029</span>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, commodi.</p>
+          </p>
+        </div>
+      </div>
+      <div class="interests">
+        <header>
+          <i class='fas fa-plane ' style="color: grey;"></i>
+          <b>Interests</b>
+        </header>
+
+        <div class="icon">
+          <i class='fas fa-camera custom-icon' style="color:rgb(0, 128, 255);"></i>
+          <i class='fas fa-wine-glass custom-icon' style="color: rgb(0, 128, 255);"></i>
+          <i class='fas fa-headphones custom-icon' style="color: rgb(0, 128, 255);"></i>
+          <i class='fas fa-message custom-icon' style="color: rgb(0, 128, 255);"></i>
+          <i class='fas fa-coffee custom-icon' style="color: rgb(0, 128, 255);"></i>
+        </div>
+
+      </div>
+      <footer>
+        <ul>
+          <li><i><a href="https://github.com/" target="_blank"> Github </a></i> </li>
+          <li><i><a href="https://www.linkedin.com/in/sumit-saini-554922292" target="_blank"> Linkdin </a></i></li>
+        </ul>
+      </footer>
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>
